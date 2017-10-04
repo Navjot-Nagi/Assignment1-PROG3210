@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.on.conestogac.navjot.assignment1.LogInActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="368dp"
+        android:layout_height="495dp">
+        <!--Bill Amount-->
+        <TextView
+            android:id="@+id/userNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/user_name_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/userNameLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/userNameLabel"
+            android:ems="8"
+            android:inputType="text"
+            android:text="@string/user_name"
+            android:textSize="20sp"/>
+        <!--The Tip Percent-->
+        <TextView
+            android:id="@+id/passwordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/userNameLabel"
+            android:layout_below="@+id/userNameLabel"
+            android:padding="10dp"
+            android:text="@string/password_label"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/passwordLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/userNameLabel"
+            android:ems="8"
+            android:inputType="textPassword"
+            android:text="@string/user_name"
+            android:textSize="20sp"/>
+
+        <Button
+            android:id="@+id/LogInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_alignLeft="@+id/userNameLabel"
+            android:layout_below="@+id/passwordLabel"
+            android:text="@string/login"
+            android:textSize="15sp"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/LogInButton"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/LogInButton"
+            android:onClick="onClick"
+            android:text="@string/register"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
