@@ -9,6 +9,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import java.util.List;
+
+import data.AppDatabase;
+import data.User;
+
 public class LogInActivity extends AppCompatActivity implements OnClickListener {
     //define instance variables for the widgets
     private EditText userName;
@@ -18,6 +23,9 @@ public class LogInActivity extends AppCompatActivity implements OnClickListener 
     private Toast successLogin;
     private Toast errMsgUsrPwd;
     private Toast errMsgPassword;
+    private Toast errFindUser;
+    private User user;
+    private AppDatabase database;
 
 
     @Override
@@ -33,8 +41,9 @@ public class LogInActivity extends AppCompatActivity implements OnClickListener 
                 findViewById(R.id.passwordText);
         Register = (Button)
                 findViewById(R.id.registerButton);
+        database = AppDatabase.getDatabase(this.getApplication());
         successLogin = Toast.makeText(this, "you are successfully Logged In", Toast.LENGTH_SHORT);
-
+        errFindUser = Toast.makeText(this, "User does not exists", Toast.LENGTH_SHORT);
         errMsgPassword = Toast.makeText(this, "Wrong Password", Toast.LENGTH_SHORT);
         errMsgUsrPwd = Toast.makeText(this, "Check your User Name and Password", Toast.LENGTH_SHORT);
 
@@ -44,7 +53,12 @@ public class LogInActivity extends AppCompatActivity implements OnClickListener 
     {
         String userNameString = userName.getText().toString();
         String passwordString = password.getText().toString();
-        if(userNameString.equals("Navjot Nagi") && passwordString.equals("login") ){
+        List<User> userLogin = database.userDao().getUser(userNameString);
+        if(userLogin.size() == 0)
+        {
+            errFindUser.show();
+        }
+        else if(passwordString.equals(userLogin.get(0).password)){
             Intent mainPage = new Intent(this, MainActivity.class);
             startActivity(mainPage);
             successLogin.show();

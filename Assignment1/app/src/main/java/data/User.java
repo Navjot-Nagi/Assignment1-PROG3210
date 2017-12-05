@@ -2,6 +2,7 @@ package data;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 import android.widget.EditText;
 
 /**
@@ -10,6 +11,7 @@ import android.widget.EditText;
 @Entity
 public class User {
 @PrimaryKey
+@NonNull
     public String userName;
     public String password;
     public String firstName;
