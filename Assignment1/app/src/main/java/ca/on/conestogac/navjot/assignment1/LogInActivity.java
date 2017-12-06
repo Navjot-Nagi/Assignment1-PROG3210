@@ -62,6 +62,9 @@ public class LogInActivity extends AppCompatActivity implements OnClickListener 
             Intent mainPage = new Intent(this, MainActivity.class);
             startActivity(mainPage);
             successLogin.show();
+            userName.setText("");
+            password.setText("");
+
         }
         else if(passwordString.equals("login")==false ){
             errMsgPassword.show();

@@ -12,5 +12,10 @@ import java.util.List;
  */
 @Dao
 public interface LocationDao {
+    @Insert(onConflict = OnConflictStrategy.ROLLBACK)
+    void addLocation(Location location);
+
+    @Query("select * from location")
+    public List<Location> getLocation();
 }
 

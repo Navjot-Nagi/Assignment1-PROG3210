@@ -30,8 +30,6 @@ public class RegistrationActivity extends AppCompatActivity implements OnClickLi
     private User user;
     private AppDatabase database;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

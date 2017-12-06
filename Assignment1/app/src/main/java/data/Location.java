@@ -26,8 +26,7 @@ public class Location {
     public double longiude;
     public String userName;
 
-    public Location(int locationId, String name, String address, double latitude, double longiude, String userName){
-        this.locationId = locationId;
+    public Location(String name, String address, double latitude, double longiude, String userName){
         this.name = name;
         this.address = address;
         this.latitude = latitude;
