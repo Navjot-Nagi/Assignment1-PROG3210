@@ -32,17 +32,18 @@ public class LocationActivity extends AppCompatActivity {
         address = (TextView)
                 findViewById(R.id.userAddress);
         database = AppDatabase.getDatabase(this.getApplication());
+        locationData();
 
     }
 
-    public void logInData()
+    public void locationData()
     {
         String userNameString = nameOfLocation.getText().toString();
         String passwordString = address.getText().toString();
         List<Location> getLocation = database.locationDao().getLocation();
 
-        nameOfLocation.setText(getLocation.get(1).name);
-        address.setText("hello");
+        nameOfLocation.setText(getLocation.get(0).name);
+        address.setText(getLocation.get(0).address);
 
     }
 
@@ -51,7 +52,4 @@ public class LocationActivity extends AppCompatActivity {
         startActivity(main);
     }
 
-    public void test(View view) {
-        logInData();
-    }
 }
