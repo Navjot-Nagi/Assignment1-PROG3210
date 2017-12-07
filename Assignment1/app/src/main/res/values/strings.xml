@@ -27,4 +27,8 @@
     <string name="action_Location">Locatons</string>
     <string name="location_name_title">Locations</string>
     <string name="test">test</string>
+    <string name="weather_title">Weather</string>
+    <string name="weather_condition">Weather Condition</string>
+    <string name="gget_weather_conditions">Get Weather Conditions</string>
+    <string name="weather_temperature">Teamperature</string>
 </resources>

@@ -6,8 +6,21 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
+import java.util.List;
+
+import data.AppDatabase;
+import data.Weather;
+
 
 public class MainActivity extends AppCompatActivity {
+    private AppDatabase database;
+    private Weather weather;
+    private TextView weatherCondition;
+    private TextView temperature;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +28,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        weatherCondition = (TextView)
+                findViewById(R.id.WeatherConditionLabel);
+        temperature = (TextView)
+                findViewById(R.id.temperature);
+        database = AppDatabase.getDatabase(this.getApplication());
+    }
+    public void weatherConditions()
+    {
+        String userNameString = weatherCondition.getText().toString();
+        String passwordString = temperature.getText().toString();
+        List<Weather> getWeather = database.weatherDao().getWeather();
+
+        weatherCondition.setText(getWeather.get(0).weatherCondition);
+        temperature.setText(getWeather.get(0).temperature);
+
     }
 
     @Override
@@ -42,5 +70,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void getWeatherConditions(View view) {
+        weatherConditions();
     }
 }
