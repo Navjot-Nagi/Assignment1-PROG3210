@@ -17,10 +17,10 @@
             android:id="@+id/locationNameTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="2dp"
             android:text="@string/location_name_title"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
         <TextView
             android:id="@+id/locationNameLabel"
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/userNameText"
+            android:id="@+id/userAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/colon"
@@ -63,6 +63,15 @@
             android:text="@string/back"
             android:textSize="15sp"
             android:onClick="goBack"/>
+        <Button
+            android:id="@+id/test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/locationNameLabel"
+            android:text="@string/test"
+            android:textSize="15sp"
+            android:onClick="test" />
 
     </RelativeLayout>
 

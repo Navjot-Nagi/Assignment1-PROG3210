@@ -26,4 +26,5 @@
     <string name="back">Go Back</string>
     <string name="action_Location">Locatons</string>
     <string name="location_name_title">Locations</string>
+    <string name="test">test</string>
 </resources>
