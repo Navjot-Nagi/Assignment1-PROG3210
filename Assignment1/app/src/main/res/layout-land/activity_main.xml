@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="ca.on.conestogac.navjot.assignment1.MainActivity">
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -25,26 +26,11 @@
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="576dp"
         android:layout_height="295dp">
-
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"/>
-        <TextView
-            android:id="@+id/seekBarText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/seek_bar_text"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:paddingTop="10dp"/>
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

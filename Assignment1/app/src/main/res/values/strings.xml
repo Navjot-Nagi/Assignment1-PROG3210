@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment 1</string>
+    <string name="app_name">Google Maps and Weather</string>
     <string name="user_name_label">User Name</string>
     <string name="user_name" />
     <string name="password_label">Password</string>
@@ -20,4 +20,10 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="logOut">Log Out</string>
+    <string name="location_name_label">Name of location</string>
+    <string name="address">Address</string>
+    <string name="location_colon">:</string>
+    <string name="back">Go Back</string>
+    <string name="action_Location">Locatons</string>
+    <string name="location_name_title">Locations</string>
 </resources>
