@@ -59,9 +59,10 @@ public class LogInActivity extends AppCompatActivity implements OnClickListener 
             errFindUser.show();
         }
         else if(passwordString.equals(userLogin.get(0).password)){
+            successLogin.show();
             Intent mainPage = new Intent(this, MainActivity.class);
             startActivity(mainPage);
-            successLogin.show();
+
             userName.setText("");
             password.setText("");
 
