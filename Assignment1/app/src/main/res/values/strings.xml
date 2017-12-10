@@ -31,4 +31,7 @@
     <string name="weather_condition">Weather Condition</string>
     <string name="gget_weather_conditions">Get Weather Conditions</string>
     <string name="weather_temperature">Teamperature</string>
+    <string name="go_Location">Location</string>
+    <string name="go_Weather">Weather</string>
+    <string name="action_Weather">Weather</string>
 </resources>

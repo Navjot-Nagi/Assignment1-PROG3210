@@ -10,16 +10,37 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <Button
-        android:id="@+id/logOutButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:layout_margin="5dp"
-        android:layout_marginTop="10dp"
+        <Button
+            android:id="@+id/goWeatherButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:onClick="goWeather"
+            android:text="@string/go_Weather"
+            android:textSize="15sp" />
 
-        android:onClick="logout"
-        android:text="@string/logOut"
-        android:textSize="15sp" />
-    </RelativeLayout>
+        <Button
+            android:id="@+id/goLocationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/goWeatherButton"
+            android:onClick="goLocation"
+            android:text="@string/go_Location"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/goLocationButton"
+            android:onClick="logout"
+            android:text="@string/logOut"
+            android:textSize="15sp" />
+        </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

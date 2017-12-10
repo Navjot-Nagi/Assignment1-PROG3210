@@ -63,10 +63,14 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             Intent logOut = new Intent(this, SettingsActivity.class);
             startActivity(logOut);
-        } else if (id == R.id.action_locations) {
+        }
+        else if (id == R.id.action_locations) {
             Intent location = new Intent(this, LocationActivity.class);
             startActivity(location);
-
+        }
+        else if (id == R.id.action_weather) {
+            Intent weather = new Intent(this, MainActivity.class);
+            startActivity(weather);
         }
 
         return super.onOptionsItemSelected(item);

@@ -17,4 +17,14 @@ public class SettingsActivity extends AppCompatActivity {
         Intent logIn = new Intent(this, LogInActivity.class);
         startActivity(logIn);
     }
+
+    public void goWeather(View view) {
+        Intent weather = new Intent(this, MainActivity.class);
+        startActivity(weather);
+    }
+
+    public void goLocation(View view) {
+        Intent location = new Intent(this, LocationActivity.class);
+        startActivity(location);
+    }
 }
